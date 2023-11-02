@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 16:14:05 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/01 18:44:22 by mbentahi         ###   ########.fr       */
+/*   Created: 2023/10/31 16:13:41 by mbentahi          #+#    #+#             */
+/*   Updated: 2023/11/01 16:04:48 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-int	ft_isascii(int c)
+int	ft_tolower(int ch)
 {
-	if ((c >= 0 && c <= 127))
-		return (1);
-	return (0);
+	if (ch >= 'A' && ch <= 'Z')
+	{
+		return (ch + 32);
+	}
+	return (ch);
 }
