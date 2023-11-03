@@ -6,8 +6,20 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:14:16 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/01 16:07:11 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/03 16:09:01 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void bzero(void *s, size_t len)
+{
+	size_t i;
+	
+	i = 0;
+	while (i < len)
+	{
+		((unsigned char *)s)[i] = '\0';
+		i++;
+	}
+}

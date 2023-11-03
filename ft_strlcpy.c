@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:52:11 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/01 21:42:32 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/02 15:49:54 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t src_len;
+	size_t	src_len;
 
-	src_len = ft_strlen(src);	
+	src_len = ft_strlen(src);
 	i = 0;
 	while (src[i] && i + 1 < dstsize)
 	{
@@ -28,4 +28,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		dst[i] = '\0';
 	return (i);
 }
-/* [], [a, b, c]*/
