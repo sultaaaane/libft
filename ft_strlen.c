@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:13:47 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/03 00:15:06 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/04 14:10:35 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;
-	
+
 	i = 0;
-	if (str[i] == '\0')
-		return (NULL);
 	while (str[i])
 		i++;
 	return (i);

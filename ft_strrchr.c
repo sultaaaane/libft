@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:13:44 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/02 15:29:06 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/04 15:43:29 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strrchr(const char *str, int c)
 		{
 			last_occurrence = (char *)str;
 		}
-		*str++;
+		str++;
 	}
 	if (*str == c)
 	{

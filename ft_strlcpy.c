@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:52:11 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/02 15:49:54 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/04 15:42:53 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	if (i < dstsize)
 		dst[i] = '\0';
-	return (i);
+	return (src_len);
 }

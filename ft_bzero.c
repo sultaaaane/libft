@@ -6,16 +6,16 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:14:16 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/03 16:09:01 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:20:25 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void bzero(void *s, size_t len)
+void	ft_bzero(void *s, size_t len)
 {
-	size_t i;
-	
+	size_t	i;
+
 	i = 0;
 	while (i < len)
 	{
