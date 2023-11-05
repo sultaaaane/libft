@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:13:44 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/04 15:43:29 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/05 17:44:20 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strrchr(const char *str, int c)
 		}
 		str++;
 	}
-	if (*str == c)
+	if (*str == '\0')
 	{
 		return ((char *)str);
 	}

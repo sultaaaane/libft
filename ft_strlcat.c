@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 02:04:53 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/05 15:36:11 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/05 17:08:41 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ int main()
 	char dest[15] = "Hello";
 	printf("%lu\n", ft_strlcat(dest,str,sizeof(dest)));
 	printf("%s\n",dest);
-	 printf("%li\n", strlcat(dest,str,sizeof(dest)));
+	 printf("%lu\n", strlcat(dest,str,sizeof(dest)));
 	 printf("%s\n",dest);
 }

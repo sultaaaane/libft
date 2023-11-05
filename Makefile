@@ -1,4 +1,4 @@
-Library		= libft
+Library	   = libft.a
 
 files 	   = ft_strlen \
 			 ft_memmove \
@@ -20,14 +20,14 @@ files 	   = ft_strlen \
 			 ft_atoi \
 			 ft_calloc \
 			 ft_strdup \
-			 ft_strnstr \
+			 ##ft_strnstr \
 			 
 
 Compiler	= cc
 
 CmpFlags	= -Wall -Wextra -Werror
 
-OUTN	= $(Library).a
+OUTN	= $(Library)
 
 CFILES	= $(files:%=%.c)
 
