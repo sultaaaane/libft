@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 16:06:19 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/04 16:06:44 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/05 14:42:15 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,10 @@ void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+char *ft_strnstr(const char *big, const char *little, size_t len);
+
+
+
+
 
 #endif

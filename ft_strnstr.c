@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 22:10:18 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/05 14:40:29 by mbentahi         ###   ########.fr       */
+/*   Created: 2023/11/05 14:40:57 by mbentahi          #+#    #+#             */
+/*   Updated: 2023/11/05 14:47:26 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *str1, const char *str2, size_t n)
-{
-	size_t	i;
-
+char *ft_strnstr(const char *big, const char *little, size_t len)
+{	
+	int i;
+	int j;
+	
 	i = 0;
-	while (*str1 && *str2 && *str1 == *str2 && i < n)
-	{
-		str1++;
-		str2++;
-		i++;
-	}
-	if (i == n)
-		return (0);
-	return (*(unsigned char *)str1 - *(unsigned char *)str2);
+	j = 0;
+	if (!little)
+		return (big);
+	
+	
 }
