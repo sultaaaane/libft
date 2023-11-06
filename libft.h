@@ -6,13 +6,15 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 16:06:19 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/05 14:42:15 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/06 01:28:58 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+
+# define SIZE_MAX 18446744073709551615
 # include <stdlib.h>
 # include <string.h>
 

@@ -1,53 +1,82 @@
-Library	   = libft.a
+CC			=	cc
+CFLAGS		=	-Wall -Wextra -Werror
+OBJEC		= 	$(SRC:.c=.o)
 
-files 	   = ft_strlen \
-			 ft_memmove \
-			 ft_memcpy \
-			 ft_strlcpy \
-			 ft_strlcat \
-			 ft_isalpha \
-			 ft_isdigit \
-			 ft_isalnum \
-			 ft_isascii \
-			 ft_isprint \
-			 ft_memset \
-			 ft_bzero \
-			 ft_toupper \
-			 ft_tolower \
-			 ft_strchr \
-			 ft_strrchr \
-			 ft_strncmp \
-			 ft_atoi \
-			 ft_calloc \
-			 ft_strdup \
-			 ##ft_strnstr \
-			 
+#----------------------------------------------#
+#			  archive file name
+#----------------------------------------------#
+NAME		=	libft.a
 
-Compiler	= cc
+#----------------------------------------------#
+#				source code 
+#----------------------------------------------#
+SRC			=	ft_strlen.c \
+			 ft_memmove.c \
+			 ft_memcpy.c \
+			 ft_strlcpy.c \
+			 ft_strlcat.c \
+			 ft_isalpha.c \
+			 ft_isdigit.c \
+			 ft_isalnum.c \
+			 ft_isascii.c \
+			 ft_isprint.c \
+			 ft_memset.c \
+			 ft_bzero.c \
+			 ft_toupper.c \
+			 ft_tolower.c \
+			 ft_strchr.c \
+			 ft_strrchr.c \
+			 ft_strncmp.c \
+			 ft_atoi.c \
+			 ft_calloc.c \
+			 ft_strdup.c \
+			 ft_strnstr.c \
 
-CmpFlags	= -Wall -Wextra -Werror
+#----------------------------------------------#
+# 					Colors
+#----------------------------------------------#
+NO_COLOR    = \033[0m
+GRAY 		= \033[0;90m
+RED 		= \033[0;91m
+GREEN 		= \033[0;92m
 
-OUTN	= $(Library)
 
-CFILES	= $(files:%=%.c)
+all			: $(NAME)
 
-OFILES	= $(files:%=%.o)
+#----------------------------------------------#
+#		  compiling src files to object 
+#----------------------------------------------#
+%.o : %.c
+	@$(CC) $(CFLAGS) -c $< -o $@
+	@printf "\r ⌛$(GRAY)Making libft$(NO_COLOR)"
+#----------------------------------------------#
 
-NAME	= $(OUTN)
 
-$(NAME):
-	$(Compiler) $(CmpFlags) -c $(CFILES) -I./
-	ar -rc $(OUTN) $(OFILES)
 
-all: $(NAME)
+#----------------------------------------------#
+#				creat Archiive
+#----------------------------------------------#
+$(NAME)		: $(OBJEC)
+	@ar rc $(NAME) $(OBJEC)
+	@printf "\r$(GREEN) 🗃️ your libft is ready$(NO_COLOR)✅\n"
 
-clean:
-	rm -f $(NAME)
-	rm -f $(OFILES)
+#----------------------------------------------#
+#				delete object file
+#----------------------------------------------#
+clean		:
+	@rm -f $(OBJEC)
+	@printf "🚮 $(RED)delete all object files <*.o>\n$(NO_COLOR)"
+#----------------------------------------------#
+#		 delete object file and archive
+#----------------------------------------------#
+fclean		: clean
+	@rm -f $(NAME)
+	@printf "🚮 $(RED)delet libft.a\n$(NO_COLOR)"
 
-fclean: clean
-	rm -f $(NAME)
 
-re: fclean all
+#----------------------------------------------#
+#			delete all and remake it
+#----------------------------------------------#
+re			: fclean all
 
-.PHONY: all, clean, fclean, re
+.PHONY		: all clean fclean re

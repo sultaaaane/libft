@@ -6,11 +6,11 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:13:41 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/02 15:30:45 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/05 22:15:03 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_tolower(int ch)
 {

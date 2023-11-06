@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 22:31:26 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/03 22:42:09 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/05 22:44:43 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ char	*ft_strdup(const char *s)
 	int		i;
 
 	i = 0;
-	if (!s)
-		return (NULL);
 	len = ft_strlen(s);
 	str = malloc(len + 1);
+	if (!str)
+		return (NULL);
 	while (s[i])
 	{
 		str[i] = s[i];
