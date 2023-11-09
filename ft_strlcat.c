@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 02:04:53 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/05 17:08:41 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/07 03:08:27 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	if (i < size)
 		dst[i + j] = '\0';
 	return (i + ft_strlen(src));
-}
-#include<stdio.h>
-#include<bsd/string.h>
-int main()
-{
-	char str[] = "World!";
-	char dest[15] = "Hello";
-	printf("%lu\n", ft_strlcat(dest,str,sizeof(dest)));
-	printf("%s\n",dest);
-	 printf("%lu\n", strlcat(dest,str,sizeof(dest)));
-	 printf("%s\n",dest);
 }
