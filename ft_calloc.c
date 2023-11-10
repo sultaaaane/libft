@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 21:58:22 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/09 21:50:32 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/10 01:34:03 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,14 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*str;
 
-	if (nmemb == 0 || size == 0)
-	{
-		nmemb = 1;
-		size = 1;
-	}
+	// if (nmemb == 0 || size == 0)
+	// {
+	// 	nmemb = 0;
+	// 	size = 0;
+	// }
+	
+	if (nmemb && /* (~((size_t)0)) */  SIZE_MAX / nmemb < size)
+		return (NULL);
 	str = malloc(nmemb * size);
 	if (!str)
 		return (NULL);

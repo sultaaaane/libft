@@ -6,35 +6,63 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:24:43 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/09 21:53:33 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/10 00:54:28 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_newstr(size_t size)
 {
-	char *str;
-	size_t i;
-	size_t j;
-	
-	str = (char *)malloc(sizeof(s) * (len + 1));
-	if (!str)
-	{
+	char	*res;
+
+	res = malloc(size + 1);
+	if (!res)
 		return (NULL);
-	}
-	
-	i = 0;
+	ft_bzero(res, size + 1);
+	return (res);
+}
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*str;
+	size_t	j;
+
+	if (s == NULL)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_newstr(0));
+	if (ft_strlen(s) - start < len)
+		len = ft_strlen(s) - start;
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
 	j = 0;
-	while (s[i])
+	while (s[start + j] && j < len)
 	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-		}
-		i++;
+		str[j] = s[start + j];
 		j++;
 	}
 	str[j] = '\0';
 	return (str);
 }
+
+// #include<stdio.h>
+
+// size_t	ft_strlen(const char *str)
+// {
+// 	size_t	i;
+
+// 	i = 0;
+// 	while (str[i])
+// 		i++;
+// 	return (i);
+// }
+
+// int main()
+// {
+// 	char *ptr;
+// 	char str[] = "hello world!";
+// 	ptr = ft_substr("hola221212", 4, 100);
+// 	printf("%s",ptr);
+// }
