@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:24:43 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/10 01:47:22 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/10 20:11:51 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,23 +46,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[j] = '\0';
 	return (str);
 }
-
-// #include<stdio.h>
-
-// size_t	ft_strlen(const char *str)
-// {
-// 	size_t	i;
-
-// 	i = 0;
-// 	while (str[i])
-// 		i++;
-// 	return (i);
-// }
-
-// int main()
-// {
-// 	char *ptr;
-// 	char str[] = "hello world!";
-// 	ptr = ft_substr("hola221212", 4, 100);
-// 	printf("%s",ptr);
-// }

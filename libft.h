@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 16:06:19 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/09 13:24:31 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/11 20:36:09 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # define SIZE_MAX 18446744073709551615
 # include <stdlib.h>
 # include <string.h>
+# include <unistd.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -42,5 +43,12 @@ void *ft_memmove(void *dest, const void *src, size_t n);
 void *ft_memchr(const void *s, int c, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 char *ft_substr(char const *s, unsigned int start, size_t len);
+char *ft_strjoin(char const *s1, char const *s2);
+char *ft_strtrim(char const *s1, char const *set);
+void ft_putchar_fd(char c, int fd);
+void ft_putendl_fd(char *s, int fd);
+void ft_putstr_fd(char *s, int fd);
+void ft_putnbr_fd(int n, int fd);
+
 
 #endif
