@@ -6,15 +6,13 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 16:06:19 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/11 20:36:09 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/12 02:10:49 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-
-# define SIZE_MAX 18446744073709551615
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
@@ -49,6 +47,6 @@ void ft_putchar_fd(char c, int fd);
 void ft_putendl_fd(char *s, int fd);
 void ft_putstr_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
-
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif

@@ -40,7 +40,7 @@ SRC			=	ft_strlen.c \
 			 ft_putstr_fd.c \
 			 ft_putnbr_fd.c \
 			 ft_strtrim.c \
-
+			 ft_strmapi.c \
 
 
 
