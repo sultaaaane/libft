@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 21:03:06 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/07 02:17:15 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/14 10:59:08 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (dest == NULL && src == NULL)
 		return (NULL);
 	if (dest < src)
-		memcpy(dest, src, n);
+		ft_memcpy(dest, src, n);
 	else
 	{
 		while (i-- && *s)

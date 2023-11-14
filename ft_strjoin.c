@@ -43,21 +43,18 @@ static char	*ft_strcpy(char *dst, char *src)
 	return (dst);
 }
 
-
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t s1_len;
-	size_t s2_len;
-	char *str;
-	
-	
+	size_t	s1_len;
+	size_t	s2_len;
+	char	*str;
+
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	str = malloc((s1_len + s2_len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
-	ft_strcpy(str,(char *)s1);
-	ft_strcat(str,s2);
-	
+	ft_strcpy(str, (char *)s1);
+	ft_strcat(str, s2);
 	return (str);
 }

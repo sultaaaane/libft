@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 16:06:19 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/12 02:10:49 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/13 18:14:01 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,8 @@ void ft_putendl_fd(char *s, int fd);
 void ft_putstr_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char **ft_split(char const *s, char c);
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
+char *ft_itoa(int n);
 
 #endif

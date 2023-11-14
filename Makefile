@@ -41,7 +41,9 @@ SRC			=	ft_strlen.c \
 			 ft_putnbr_fd.c \
 			 ft_strtrim.c \
 			 ft_strmapi.c \
-
+			 ft_split.c \
+			 ft_striteri.c \
+			 ft_itoi.c \
 
 
 

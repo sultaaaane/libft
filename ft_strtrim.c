@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *str;
-	int i;
-	int j;
-	int k;
+	char	*str;
+	int		i;
+	int		j;
+	int		k;
 
 	i = 0;
 	j = 0;
