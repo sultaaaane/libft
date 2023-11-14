@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 16:06:19 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/13 18:14:01 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/14 21:43:12 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <string.h>
+# include <stdio.h>
 # include <unistd.h>
 
 int		ft_isalpha(int c);
@@ -51,5 +52,16 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char **ft_split(char const *s, char c);
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
 char *ft_itoa(int n);
+
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
+
+t_list *ft_lstnew(void *content);
+void ft_lstadd_front(t_list **lst, t_list *new);
+
+
 
 #endif
