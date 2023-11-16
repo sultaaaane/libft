@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:46:29 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/14 10:59:01 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/16 16:55:39 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*str2;
 
 	i = 0;
-	if (!(s1 || s2 || n))
+	if (!s1 || !s2 || !n)
 		return (0);
 	
 	str1 = (unsigned char *)s1;

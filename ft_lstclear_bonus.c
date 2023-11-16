@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 13:05:39 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/15 13:09:53 by mbentahi         ###   ########.fr       */
+/*   Created: 2023/11/15 16:27:53 by mbentahi          #+#    #+#             */
+/*   Updated: 2023/11/16 18:39:17 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+void ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list *l;
 	
-	l = lst;
-	while (l->next)
+	if (!*lst || !del)
+		return ;
+	
+	l = *lst;
+	while (l)
 	{
+		del(l);
 		l = l->next;
 	}
-	return (l);
 }

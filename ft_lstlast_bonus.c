@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 16:13:50 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/16 16:22:28 by mbentahi         ###   ########.fr       */
+/*   Created: 2023/11/15 13:05:39 by mbentahi          #+#    #+#             */
+/*   Updated: 2023/11/16 16:18:53 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+t_list *ft_lstlast(t_list *lst)
 {
-	while (*str)
+	if (!lst)
+		return (NULL);
+		
+	while (lst->next)
 	{
-		if (*str == c)
-		{
-			return ((char *)str);
-		}
-		str++;
+		lst = lst->next;
 	}
-	if (c == '\0')
-	{
-		return ((char *)str);
-	}
-	return (NULL);
+	return (lst);
 }

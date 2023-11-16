@@ -1,7 +1,7 @@
 CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror
 OBJEC		= 	$(SRC:.c=.o)
-
+BOBJEC		= 	$(BONUS:_bonus.c=_bonus.o)
 #----------------------------------------------#
 #			  archive file name
 #----------------------------------------------#
@@ -44,7 +44,15 @@ SRC			=	ft_strlen.c \
 			 ft_split.c \
 			 ft_striteri.c \
 			 ft_itoa.c \
+			 
 
+BONUS = 	 ft_lstadd_back_bonus.c \
+			 ft_lstadd_front_bonus.c \
+			 ft_lstnew_bonus.c \
+			 ft_lstsize_bonus.c \
+			 ft_lstlast_bonus.c \
+			 ft_lstdelone_bonus.c \
+			 ft_lstclear_bonus.c \
 
 
 #----------------------------------------------#
@@ -65,7 +73,9 @@ all			: $(NAME)
 	@$(CC) $(CFLAGS) -c $< -o $@
 	@printf "\r ⌛$(GRAY)Making libft$(NO_COLOR)"
 #----------------------------------------------#
-
+%_bonus.o : %_bonus.c
+	@$(CC) $(CFLAGS) -c $< -o $@
+	@printf "\r ⌛$(GRAY)Making libft$(NO_COLOR)"
 
 
 #----------------------------------------------#
@@ -75,17 +85,21 @@ $(NAME)		: $(OBJEC)
 	@ar rc $(NAME) $(OBJEC)
 	@printf "\r$(GREEN) 🗃️ your libft is ready$(NO_COLOR)✅\n"
 
+
+bonus		: $(BOBJEC)
+	@ar rc $(NAME) $(BOBJEC)
+	@printf "\r$(GREEN) 🗃️ your libft is ready$(NO_COLOR)✅\n"
 #----------------------------------------------#
 #				delete object file
 #----------------------------------------------#
 clean		:
-	@rm -f $(OBJEC)
+	@rm -f $(OBJEC) $(BOBJEC)
 	@printf "🚮 $(RED)delete all object files <*.o>\n$(NO_COLOR)"
 #----------------------------------------------#
 #		 delete object file and archive
 #----------------------------------------------#
 fclean		: clean
-	@rm -f $(NAME)
+	@rm -f $(NAME) 
 	@printf "🚮 $(RED)delet libft.a\n$(NO_COLOR)"
 
 
