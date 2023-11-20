@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 14:45:16 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/14 10:59:34 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/20 17:36:43 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,12 @@ static int	get_word_length(char const *str, char spacer)
 
 static void	ft_free(char **str, int i)
 {
-	while (i-- > 0)
-		free(str[i - 1]);
+	while (i--)
+		free(str[i]);
 	free(str);
 }
 
-int	skip(char const *s, char **split, int flag, char c)
+static int	skip(char const *s, char **split, int flag, char c)
 {
 	int	i;
 

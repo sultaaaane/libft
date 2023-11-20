@@ -53,6 +53,8 @@ BONUS = 	 ft_lstadd_back_bonus.c \
 			 ft_lstlast_bonus.c \
 			 ft_lstdelone_bonus.c \
 			 ft_lstclear_bonus.c \
+			 ft_lstiter_bonus.c \
+			 ft_lstmap_bonus.c \
 
 
 #----------------------------------------------#
@@ -100,7 +102,7 @@ clean		:
 #----------------------------------------------#
 fclean		: clean
 	@rm -f $(NAME) 
-	@printf "🚮 $(RED)delet libft.a\n$(NO_COLOR)"
+	@printf "🚮 $(RED)delete libft.a\n$(NO_COLOR)"
 
 
 #----------------------------------------------#

@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 20:18:44 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/12 22:46:42 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/20 17:18:29 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	long	nb;
 
+	if (fd < 0)
+		return ;
 	nb = n;
 	if (nb < 0)
 	{
