@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 14:45:16 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/20 17:36:43 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/23 09:18:43 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,10 @@ char	**ft_split(char const *s, char c)
 	char	**str;
 
 	if (!s)
-		return (NULL);
+	{
+		str = ft_calloc(1,8);
+		return (str);
+	}
 	word_count = check_words(s, c);
 	str = (char **)malloc((word_count + 1) * sizeof(char *));
 	if (!str)

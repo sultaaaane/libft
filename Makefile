@@ -1,16 +1,21 @@
-CC			=	cc
-CFLAGS		=	-Wall -Wextra -Werror
-OBJEC		= 	$(SRC:.c=.o)
-BOBJEC		= 	$(BONUS:_bonus.c=_bonus.o)
-#----------------------------------------------#
-#			  archive file name
-#----------------------------------------------#
-NAME		=	libft.a
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+OBJEC = $(SRC:.c=.o)
+BOBJEC = $(BONUS:.c=.o)
+AUTHOR	= mbentahi (sultane)
 
-#----------------------------------------------#
-#				source code 
-#----------------------------------------------#
-SRC			=	ft_strlen.c \
+#=== Colors ===
+NO_COLOR = \033[0m
+GRAY = \033[0;1;3;90m
+RED = \033[0;1;3;91m
+GREEN = \033[0;1;3;92m
+YELLOW = \033[0;1;3;33m
+BLUE = \033[0;1;3;34m
+MAGENTA = \033[35m
+CYAN = \033[36m
+
+
+SRC	=		 ft_strlen.c \
 			 ft_memmove.c \
 			 ft_memcpy.c \
 			 ft_strlcpy.c \
@@ -56,58 +61,47 @@ BONUS = 	 ft_lstadd_back_bonus.c \
 			 ft_lstiter_bonus.c \
 			 ft_lstmap_bonus.c \
 
+NAME = libft.a
 
-#----------------------------------------------#
-# 					Colors
-#----------------------------------------------#
-NO_COLOR    = \033[0m
-GRAY 		= \033[0;90m
-RED 		= \033[0;91m
-GREEN 		= \033[0;92m
+all: header $(NAME)
+	@printf "$(GREEN)\n- Your library is ready ✅🥳\n$(NO_COLOR)"
 
-
-all			: $(NAME)
-
-#----------------------------------------------#
-#		  compiling src files to object 
-#----------------------------------------------#
-%.o : %.c
-	@$(CC) $(CFLAGS) -c $< -o $@
-	@printf "\r ⌛$(GRAY)Making libft$(NO_COLOR)"
-#----------------------------------------------#
-%_bonus.o : %_bonus.c
-	@$(CC) $(CFLAGS) -c $< -o $@
-	@printf "\r ⌛$(GRAY)Making libft$(NO_COLOR)"
-
-
-#----------------------------------------------#
-#				creat Archiive
-#----------------------------------------------#
-$(NAME)		: $(OBJEC)
+$(NAME): $(OBJEC)
+	@$(CC) $(CFLAGS) -c $(SRC)
 	@ar rc $(NAME) $(OBJEC)
-	@printf "\r$(GREEN) 🗃️ your libft is ready$(NO_COLOR)✅\n"
 
-
-bonus		: $(BOBJEC)
+$(BOBJEC): $(BONUS)
+	@$(CC) $(CFLAGS) -c $(BONUS)
 	@ar rc $(NAME) $(BOBJEC)
-	@printf "\r$(GREEN) 🗃️ your libft is ready$(NO_COLOR)✅\n"
-#----------------------------------------------#
-#				delete object file
-#----------------------------------------------#
-clean		:
-	@rm -f $(OBJEC) $(BOBJEC)
-	@printf "🚮 $(RED)delete all object files <*.o>\n$(NO_COLOR)"
-#----------------------------------------------#
-#		 delete object file and archive
-#----------------------------------------------#
-fclean		: clean
-	@rm -f $(NAME) 
-	@printf "🚮 $(RED)delete libft.a\n$(NO_COLOR)"
 
+bonus: header $(BOBJEC)
+	@printf "$(GREEN)\n- Your bonus library is ready ✅🥳\n$(NO_COLOR)"
 
-#----------------------------------------------#
-#			delete all and remake it
-#----------------------------------------------#
-re			: fclean all
+clean: header
+	@rm -rf *.o
+	@printf "$(BLUE)clean\t:\t\t\t$(GREEN)[✓]$(NO_COLOR)\n"
 
-.PHONY		: all clean fclean re
+fclean: clean
+	@rm -rf $(NAME)
+	@printf "$(BLUE)fclean\t:\t\t\t$(GREEN)[✓]$(NO_COLOR)\n\n"
+
+re: fclean all
+
+.PHONY: all clean fclean bonus re
+
+header :
+
+	@printf "$(RED)"
+	@echo "██▓     ██▓ ▄▄▄▄     █████▒▄▄▄█████▓"
+	@echo "▓██▒    ▓██▒▓█████▄ ▓██   ▒ ▓  ██▒ ▓▒"
+	@echo "▒██░    ▒██▒▒██▒ ▄██▒████ ░ ▒ ▓██░ ▒░"
+	@echo "▒██░    ░██░▒██░█▀  ░▓█▒  ░ ░ ▓██▓ ░"
+	@echo "░██████▒░██░░▓█  ▀█▓░▒█░      ▒██▒ ░" 
+	@echo "░ ▒░▓  ░░▓  ░▒▓███▀▒ ▒ ░      ▒ ░░"   
+	@echo "░ ░ ▒  ░ ▒ ░▒░▒   ░  ░          ░"    
+	@echo "  ░ ░    ▒ ░ ░    ░  ░ ░      ░"      
+	@echo "    ░  ░ ░   ░"                       
+	@echo "                  ░"                  
+	@printf  "$(MAGENTA)Author\t: $(GRAY)$(AUTHOR)\n"
+	@printf  "$(MAGENTA)CC    \t: $(CYAN)$(CC)\n"
+	@printf  "$(MAGENTA)Flags \t: $(CYAN)$(CFLAGS)\n"
