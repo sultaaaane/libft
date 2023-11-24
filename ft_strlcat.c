@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 02:04:53 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/21 23:05:45 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/23 19:37:07 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		i++;
 	if (size < i)
 		return (size + ft_strlen(src));
-	
 	while (src[j] && (i + j + 1) < size)
 	{
 		dst[i + j] = src[j];

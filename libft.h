@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 16:06:19 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/20 11:00:59 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/23 11:27:36 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <fcntl.h>
 
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);

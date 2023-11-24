@@ -78,7 +78,7 @@ bonus: header $(BOBJEC)
 	@printf "$(GREEN)\n- Your bonus library is ready ✅🥳\n$(NO_COLOR)"
 
 clean: header
-	@rm -rf *.o
+	@rm -rf $(BOBJEC) $(OBJEC)
 	@printf "$(BLUE)clean\t:\t\t\t$(GREEN)[✓]$(NO_COLOR)\n"
 
 fclean: clean

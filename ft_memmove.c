@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 21:03:06 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/19 20:40:06 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/23 18:35:33 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
 	i = n;
+	if (src == dest)
+		return ((void *)src);
 	if (dest == NULL && src == NULL)
 		return (NULL);
 	if (dest < src)

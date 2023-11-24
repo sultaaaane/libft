@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 21:58:22 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/21 20:07:24 by mbentahi         ###   ########.fr       */
+/*   Updated: 2023/11/23 18:57:44 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*str;
 
+	if (nmemb && 18446744073709551615UL / nmemb < size)
+		return (NULL);
 	str = malloc(nmemb * size);
 	if (!str)
 		return (NULL);
