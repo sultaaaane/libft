@@ -105,15 +105,14 @@ gcc libft.a your_program.c
 - `ft_lstiter` - Iterates over the list and applies a function to each node.
 - `ft_lstmap` - Applies a function to each node of a list and creates a new list.
 ### Descriptions for the Additional Functions:
-- `get_next_line(int fd)` - Reads a line from a file descriptor fd until a newline is encountered or EOF is reached.
-- `ft_free2d(char **str)` - Frees a dynamically allocated 2D array of strings.
-- `ft_is_whitespace(char *str)` - Checks if a given string consists only of whitespace characters.
-- `ft_strndup(const char *s, int n)` - Duplicates up to n characters of the string s.
-- `ft_is_space(char c)` - Checks if a character is a whitespace character (' ', '\t', '\n', etc.).
-- `ft_strdup_2d(char **s)` - Duplicates a 2D array of strings.
-- `ft_realloc(void *ptr, size_t size)` - Reallocates memory to a new size, preserving the original content up to the minimum of the old and new sizes.
-- `ft_strlen2d(char **str)` - Calculates the number of strings in a 2D array.
-- `ft_rand(int reset, int seed)` - Generates a random number; optionally resets with a given seed value.
+- `get_next_line` - Reads a line from a file descriptor fd until a newline is encountered or EOF is reached.
+- `ft_free2d` - Frees a dynamically allocated 2D array of strings.
+- `ft_is_whitespace` - Checks if a given string consists only of whitespace characters.
+- `ft_strndup` - Duplicates up to n characters of the string s.
+- `ft_is_space` - Checks if a character is a whitespace character (' ', '\t', '\n', etc.).
+- `ft_strdup_2d` - Duplicates a 2D array of strings.
+- `ft_strlen2d` - Calculates the number of strings in a 2D array.
+- `ft_rand` - Generates a random number; optionally resets with a given seed value.
 
 ## Contributing
 
