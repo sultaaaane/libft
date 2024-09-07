@@ -48,7 +48,7 @@ To use the functions provided by the library, include `libft.h` in your source f
 Compile your code with the generated `libft.a` file:
 
 ```bash
-gcc -o your_program your_program.c -L. -lft
+gcc libft.a your_program.c
 ```
 
 ## Functions
@@ -113,11 +113,3 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
-
-### Notes:
-
-1. **Makefile**: Ensure you have a `Makefile` to compile the library (`libft.a`).
-2. **License**: Add a `LICENSE` file in your repository if you haven't already.
-3. **Customization**: Update the repository link, project details, and any additional features as needed.
-
-Feel free to let me know if you'd like to make any changes or add more sections!
