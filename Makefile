@@ -2,7 +2,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 OBJEC = $(SRC:.c=.o)
 BOBJEC = $(BONUS:.c=.o)
-AUTHOR	= mbentahi (sultane)
+AUTHOR	= (mbentahi X aassaf)
 
 #=== Colors ===
 NO_COLOR = \033[0m
@@ -49,7 +49,19 @@ SRC	=		 ft_strlen.c \
 			 ft_split.c \
 			 ft_striteri.c \
 			 ft_itoa.c \
-			 
+			 ft_lstadd_back_bonus.c \
+			 ft_lstadd_front_bonus.c \
+			 ft_lstnew_bonus.c \
+			 ft_lstsize_bonus.c \
+			 ft_lstlast_bonus.c \
+			 ft_lstdelone_bonus.c \
+			 ft_lstclear_bonus.c \
+			 ft_lstiter_bonus.c \
+			 ft_lstmap_bonus.c \
+			 get_next_line.c \
+			 ft_free2d.c \
+			 ft_is_whitespace.c \
+			 ft_rand.c \
 
 BONUS = 	 ft_lstadd_back_bonus.c \
 			 ft_lstadd_front_bonus.c \
@@ -88,7 +100,7 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean bonus re
-
+.SECONDARY: $(OBJEC) $(BOBJEC)
 header :
 
 	@printf "$(RED)"

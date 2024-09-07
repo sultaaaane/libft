@@ -6,10 +6,11 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 14:45:16 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/23 19:38:02 by mbentahi         ###   ########.fr       */
+/*   Updated: 2024/08/06 14:13:31 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/minishell.h"
 #include "libft.h"
 
 static int	check_words(char const *str, char spacer)

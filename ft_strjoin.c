@@ -6,7 +6,7 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 20:13:12 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/21 22:01:30 by mbentahi         ###   ########.fr       */
+/*   Updated: 2024/06/27 19:20:00 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,14 @@ static char	*ft_strcpy(char *dst, char *src)
 	return (dst);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	size_t	s1_len;
 	size_t	s2_len;
 	char	*str;
 
 	if (!s1 && !s2)
-		return (ft_strdup(""));
+		return (NULL);
 	if (!s1)
 		return (ft_strdup(s2));
 	if (!s2)
@@ -62,5 +62,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	ft_strcpy(str, (char *)s1);
 	ft_strcat(str, s2);
+	free(s1);
 	return (str);
 }

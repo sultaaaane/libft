@@ -6,11 +6,11 @@
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:24:43 by mbentahi          #+#    #+#             */
-/*   Updated: 2023/11/19 19:54:32 by mbentahi         ###   ########.fr       */
+/*   Updated: 2024/08/08 14:15:58 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/minishell.h"
 
 char	*ft_newstr(size_t size)
 {
@@ -23,11 +23,13 @@ char	*ft_newstr(size_t size)
 	return (res);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr1(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 	size_t	j;
+	t_all	*glob_v;
 
+	glob_v = static_global();
 	if (s == NULL)
 		return (NULL);
 	if (start >= ft_strlen(s))
@@ -35,6 +37,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (ft_strlen(s) - start < len)
 		len = ft_strlen(s) - start;
 	str = (char *)malloc(sizeof(char) * (len + 1));
+	ft_lstadd_back_free(&glob_v->free, init_free(str));
 	if (!str)
 		return (NULL);
 	j = 0;

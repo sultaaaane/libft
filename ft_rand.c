@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_rand.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 16:13:41 by mbentahi          #+#    #+#             */
-/*   Updated: 2024/03/05 00:56:13 by mbentahi         ###   ########.fr       */
+/*   Created: 2024/07/30 15:37:49 by mbentahi          #+#    #+#             */
+/*   Updated: 2024/09/07 12:53:57 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int ch)
+unsigned int	ft_rand(int reset, int seed)
 {
-	if (ch >= 'A' && ch <= 'Z')
-	{
-		return (ch + 32);
-	}
-	return (ch);
+	static unsigned int	s = 0;
+
+	if (reset)
+		s = seed;
+	s = (s * 54554 + 12348485) & 0x7fffffff;
+	return (s);
 }

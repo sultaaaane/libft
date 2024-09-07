@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_free2d.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbentahi <mbentahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 16:13:41 by mbentahi          #+#    #+#             */
-/*   Updated: 2024/03/05 00:56:13 by mbentahi         ###   ########.fr       */
+/*   Created: 2024/04/18 17:57:37 by mbentahi          #+#    #+#             */
+/*   Updated: 2024/05/11 15:08:38 by mbentahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int ch)
+void	ft_free2d(char **str)
 {
-	if (ch >= 'A' && ch <= 'Z')
+	int	i;
+
+	i = 0;
+	if (!str || !*str)
+		return (free(str));
+	while (str[i])
 	{
-		return (ch + 32);
+		free(str[i]);
+		i++;
 	}
-	return (ch);
+	free(str);
 }
